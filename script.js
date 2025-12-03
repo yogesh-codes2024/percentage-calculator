@@ -56,11 +56,15 @@ totalInvestmentInput.addEventListener('keypress', (e) => {
 expectedReturnInput.addEventListener('input', () => {
     if (expectedReturnInput.value && totalInvestmentInput.value) {
         calculateROC();
+    } else {
+        resultDiv.classList.add('hidden');
     }
 });
 
 totalInvestmentInput.addEventListener('input', () => {
     if (expectedReturnInput.value && totalInvestmentInput.value) {
         calculateROC();
+    } else {
+        resultDiv.classList.add('hidden');
     }
 });
