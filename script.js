@@ -1,7 +1,6 @@
 // Get DOM elements
 const expectedReturnInput = document.getElementById('expectedReturn');
 const totalInvestmentInput = document.getElementById('totalInvestment');
-const calculateBtn = document.getElementById('calculateBtn');
 const resultDiv = document.getElementById('result');
 const percentageDisplay = document.getElementById('percentage');
 
@@ -36,23 +35,7 @@ function calculateROC() {
     }
 }
 
-// Event listeners
-calculateBtn.addEventListener('click', calculateROC);
-
-// Allow Enter key to trigger calculation
-expectedReturnInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        calculateROC();
-    }
-});
-
-totalInvestmentInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        calculateROC();
-    }
-});
-
-// Real-time calculation on input change (optional enhancement)
+// Real-time calculation on input change
 expectedReturnInput.addEventListener('input', () => {
     if (expectedReturnInput.value && totalInvestmentInput.value) {
         calculateROC();
