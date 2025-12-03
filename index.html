@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return on Capital Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <h1>Return on Capital Calculator</h1>
+            <p class="subtitle">Calculate your percentage return on investment</p>
+            
+            <div class="input-group">
+                <label for="expectedReturn">Expected Return ($)</label>
+                <input 
+                    type="number" 
+                    id="expectedReturn" 
+                    placeholder="Enter expected return"
+                    step="0.01"
+                    min="0"
+                >
+            </div>
+            
+            <div class="input-group">
+                <label for="totalInvestment">Total Investment ($)</label>
+                <input 
+                    type="number" 
+                    id="totalInvestment" 
+                    placeholder="Enter total investment"
+                    step="0.01"
+                    min="0.01"
+                >
+            </div>
+            
+            <button id="calculateBtn" class="calculate-btn">Calculate Return %</button>
+            
+            <div id="result" class="result hidden">
+                <div class="result-label">Return on Capital</div>
+                <div id="percentage" class="result-value">0%</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
