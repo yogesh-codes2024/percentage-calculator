@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Return on Capital Calculator</title>
+    <title>Investment Calculators</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="main-header">
+        <h1>Investment Calculators</h1>
+        <p>Professional tools for smart investing</p>
+    </div>
+    
     <div class="container">
+        <!-- Return on Capital Calculator -->
         <div class="calculator-card">
-            <h1>Return on Capital Calculator</h1>
+            <h2>Return on Capital</h2>
             <p class="subtitle">Calculate your percentage return on investment</p>
             
             <div class="input-group">
@@ -19,7 +25,6 @@
                     id="expectedReturn" 
                     placeholder="Enter expected return"
                     step="0.01"
-                    min="0"
                 >
             </div>
             
@@ -39,8 +44,66 @@
                 <div id="percentage" class="result-value">0%</div>
             </div>
         </div>
+
+        <!-- Stock Price Calculator -->
+        <div class="calculator-card">
+            <h2>Stock Price Calculator</h2>
+            <p class="subtitle">Calculate target price or percentage change</p>
+            
+            <div class="input-group">
+                <label for="currentPrice">Current Stock Price ($)</label>
+                <input 
+                    type="number" 
+                    id="currentPrice" 
+                    placeholder="Enter current price"
+                    step="0.01"
+                    min="0.01"
+                >
+            </div>
+            
+            <div class="divider">
+                <span>Enter either field below</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="percentChange">Expected % Change</label>
+                <input 
+                    type="number" 
+                    id="percentChange" 
+                    placeholder="e.g., 10 or -5"
+                    step="0.01"
+                >
+            </div>
+            
+            <div class="or-divider">OR</div>
+            
+            <div class="input-group">
+                <label for="targetPrice">Target Price ($)</label>
+                <input 
+                    type="number" 
+                    id="targetPrice" 
+                    placeholder="Enter target price"
+                    step="0.01"
+                    min="0"
+                >
+            </div>
+            
+            <div id="stockResult" class="result hidden">
+                <div class="stock-result-grid">
+                    <div class="result-item">
+                        <div class="result-label">Target Price</div>
+                        <div id="calculatedTarget" class="result-value-small">$0.00</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">% Change</div>
+                        <div id="calculatedPercent" class="result-value-small">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script src="script.js"></script>
 </body>
 </html>
+
